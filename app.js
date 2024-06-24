@@ -10,9 +10,13 @@ var items = [];
 
 app.get("/", function(req, res){
     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    var d = new Date();
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     var dayName = days[d.getDay()];
-    res.render("list", {currDay:dayName, newListItem:items});
+    var date = d.getDate();
+    var monthName = months[d.getMonth()];
+    var year = d.getFullYear();
+    var formattedDate = `${dayName}, ${date} ${monthName} ${year}`;
+    res.render("list", {currDay:formattedDate, newListItem:items});
     
 });
 
