@@ -1,7 +1,7 @@
 html {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
-  min-height: 1000px;
+  min-height: 100vh;
   font-family: "Poppins", sans-serif;
 }
 
@@ -67,7 +67,7 @@ p {
   color: #00204a;
   text-align: left;
   word-wrap: break-word;
-  /* Ensure long words wrap */
+ 
   flex: 1;
 }
 
@@ -78,11 +78,8 @@ p {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  /* Center align horizontally */
-  align-items: center;
-  background-color: #00204a;
-
-}
+    align-items: center;
+  }
 
 .delete-item:hover {
   background: rgba(133, 127, 127, 0.753);
